@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name = "TestSuite1">
+
+    <test name = "runwebsiteRozetka">
+        <classes>
+            <class name = "test.RozetkaUaTest"/>
+        </classes>
+    </test>
+
+<!--    <test name = "exampletest2">-->
+<!--        <classes>-->
+<!--            <class name = "Test2" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>
