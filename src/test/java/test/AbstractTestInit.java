@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 
 @Listeners(TestListener.class)
-public class AbstractTestInit {
+public abstract class AbstractTestInit {
 
     protected WebDriver driver;
     protected Logger logger = LoggerFactory.getLogger(AbstractTestInit.class);
