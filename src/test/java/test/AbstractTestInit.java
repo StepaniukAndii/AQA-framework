@@ -4,24 +4,34 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class AbstractTestInit {
 
-    WebDriver driver;
+    protected WebDriver driver;
+    protected Logger logger = LoggerFactory.getLogger(AbstractTestInit.class);
 
     @BeforeMethod
-    public void setup(){
+    public void setup() {
+        logger.info("Start set up driver");
         String headless = System.getProperty("headless");
+        if (headless == null) {
+            headless = "";
+        }
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setHeadless(true);
+        if (headless.contains("true")) {
+            chromeOptions.setHeadless(true);
+        }
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(chromeOptions);
+        logger.info("Finish set up driver");
     }
 
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 }
