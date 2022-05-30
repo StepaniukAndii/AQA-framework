@@ -10,9 +10,14 @@ import java.time.Duration;
 
 public class BasePage {
 
-    static WebDriver driver;
+    WebDriver driver;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
+    }
+
+    public WebElement weitSetup(String locator) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
 }
