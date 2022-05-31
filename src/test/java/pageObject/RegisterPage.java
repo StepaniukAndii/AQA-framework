@@ -45,7 +45,11 @@ public class RegisterPage extends BasePage {
         return weitVisibleOfElement("//*[@id=\"register-button\"]");
     }
 
-    public void getRegisterPage() {
+    public void openRegisterPage() {
         driver.get("http://demowebshop.tricentis.com/registerresult/1");
+    }
+
+    public String pass() {
+        return String.format("123");
     }
 }

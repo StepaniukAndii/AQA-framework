@@ -4,10 +4,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObject.RegisterPage;
 
-public class TestSingUp extends AbstractTestInit{
+public class TestSingUp extends AbstractTestInit {
 
     @Test
-    public void testRegister(){
+    public void checkRegister() {
         RegisterPage registerPage = new RegisterPage(driver);
         registerPage.goToTestShop();
         registerPage.clickReg().click();
@@ -15,8 +15,8 @@ public class TestSingUp extends AbstractTestInit{
         registerPage.getEntrFirstName().sendKeys(createRandomNumber() + "TestUserName");
         registerPage.getEntrLastName().sendKeys(createRandomNumber() + "TestUserLastName");
         registerPage.getEntrEmail().sendKeys(createRandomNumber() + "sergadovlol@gmail.com");
-        registerPage.getEntrPass().sendKeys("ewqasdcxz");
-        registerPage.getEntrConfirmPass().sendKeys("ewqasdcxz");
+        registerPage.getEntrPass().sendKeys(registerPage.pass());
+        registerPage.getEntrConfirmPass().sendKeys(registerPage.pass());
         registerPage.getRegisterBtn().click();
 
         Assert.assertTrue(getUrl().contains("http://demowebshop.tricentis.com/registerresult/1"));
