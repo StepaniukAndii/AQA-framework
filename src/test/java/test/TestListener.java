@@ -33,6 +33,7 @@ public class TestListener implements ITestListener {
         //тут как-то передали драйвер, непонятный код.
         screenAfterSkip(driver);
     }
+
     private void screenAfterSkip(WebDriver driver) throws IOException {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(scrFile, new File("target/screen//" + scrFile.getName()));
