@@ -3,12 +3,12 @@
 <suite name = "TestSuite1">
 
     <listeners>
-        <listener class-name="test.TestListener" />
+        <listener class-name="listner.TestListener" />
     </listeners>
 
     <test name = "runwebsiteRozetka">
         <classes>
-            <class name = "test.RozetkaUaTest"/>
+            <class name = "test.testRozetka.RozetkaUaTest"/>
         </classes>
     </test>
 
