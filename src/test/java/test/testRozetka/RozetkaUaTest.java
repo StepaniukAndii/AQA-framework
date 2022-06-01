@@ -1,14 +1,13 @@
-package test;
+package test.testRozetka;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObject.ByNotebook;
 import pageObject.HomeElementRozetka;
 import pageObject.UserElementRozetka;
 import pageObject.LoginPage;
+import test.AbstractTestInit;
 
 public class RozetkaUaTest extends AbstractTestInit {
 
