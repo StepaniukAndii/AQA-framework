@@ -45,8 +45,5 @@ public class RozetkaUaTest extends AbstractTestInit {
         homeElementRozetka.getSearchLine().sendKeys("Ноутбук Xiaomi\n");
         ByNotebook byNotebook = new ByNotebook(driver);
         byNotebook.lowPrice();
-
-//        byNotebook.getSortList().get(1).click();
-        //изменить getSortList прочитать про Select (https://www.guru99.com/select-option-dropdown-selenium-webdriver.html)
     }
 }

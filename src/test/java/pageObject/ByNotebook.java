@@ -11,9 +11,6 @@ public class ByNotebook extends HomeElementRozetka {
     public ByNotebook(WebDriver driver) {
         super(driver);
     }
-//    public List<WebElement> getSortList(){
-//        return getListVisibleElement("//select[@class='select-css ng-valid ng-star-inserted ng-touched ng-dirty']");
-//    }
 
     public void lowPrice() {
         WebElement dropDown = getClickableElement("//select");
