@@ -14,11 +14,11 @@ public class RegisterPage extends BasePage {
     }
 
     public WebElement clickReg() {
-        return weitForClick("//a[contains(@href,\"/register\")]");
+        return getClickableElement("//a[contains(@href,\"/register\")]");
     }
 
     public WebElement radioMale() {
-        return weitForClick("//*[contains(@id,\"gender-female\")]");
+        return getClickableElement("//*[contains(@id,\"gender-female\")]");
     }
 
     public WebElement getEntrFirstName() {
