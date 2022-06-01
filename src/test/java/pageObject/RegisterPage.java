@@ -50,6 +50,6 @@ public class RegisterPage extends BasePage {
     }
 
     public String pass() {
-        return String.format("123");
+        return "ewqasdcxz";
     }
 }
