@@ -3,9 +3,9 @@ package pageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ElementRozetka extends BasePage {
+public class UserElementRozetka extends BasePage {
 
-    public ElementRozetka(WebDriver driver) {
+    public UserElementRozetka(WebDriver driver) {
         super(driver);
     }
 
@@ -13,23 +13,23 @@ public class ElementRozetka extends BasePage {
         driver.get("https://rozetka.com.ua/");
     }
 
-    public WebElement displayedLogoUserBtn() {
+    public WebElement getdisplayedLogoUserBtn() {
         return getPresentElement("//button[@class='header__button ng-star-inserted']");
     }
 
-    public WebElement displayedEnterEmailLine() {
+    public WebElement getdisplayedEnterEmailLine() {
         return getPresentElement("//*[@id=\"auth_email\"]");
     }
 
-    public WebElement displayedEnterPassLine() {
+    public WebElement getdisplayedEnterPassLine() {
         return getPresentElement("//*[@id=\"auth_pass\"]");
     }
 
-    public WebElement displayedRememberMeCheckBox() {
+    public WebElement getdisplayedRememberMeCheckBox() {
         return getPresentElement("//input[@type='checkbox']");
     }
 
-    public WebElement displayedInputBtn() {
+    public WebElement getdisplayedInputBtn() {
         return getPresentElement("//button[@class='button button--large button--green auth-modal__submit ng-star-inserted']");
     }
 }
