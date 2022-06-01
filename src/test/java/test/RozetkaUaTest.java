@@ -1,6 +1,8 @@
 package test;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObject.ByNotebook;
@@ -42,7 +44,9 @@ public class RozetkaUaTest extends AbstractTestInit {
         homeElementRozetka.goToRozetkaUa();
         homeElementRozetka.getSearchLine().sendKeys("Ноутбук Xiaomi\n");
         ByNotebook byNotebook = new ByNotebook(driver);
-        byNotebook.getSortList().get(1).click();
+        byNotebook.lowPrice();
+
+//        byNotebook.getSortList().get(1).click();
         //изменить getSortList прочитать про Select (https://www.guru99.com/select-option-dropdown-selenium-webdriver.html)
     }
 }
