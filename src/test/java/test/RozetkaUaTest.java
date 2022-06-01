@@ -7,7 +7,7 @@ import pageObject.ElementRozetka;
 public class RozetkaUaTest extends AbstractTestInit {
 
     @Test
-    public void runRozetka(){
+    public void runRozetka() {
         ElementRozetka elementRozetka = new ElementRozetka(driver);
         elementRozetka.goToRozetkaUa();
         Assert.fail();

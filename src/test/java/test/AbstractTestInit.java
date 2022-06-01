@@ -40,6 +40,14 @@ public abstract class AbstractTestInit {
     public WebDriver getDriver() {
         return driver;
     }
+
+    protected long createRandomNumber() {
+        return System.currentTimeMillis();
+    }
+
+    protected String getUrl() {
+        return driver.getCurrentUrl();
+    }
 }
 
 
