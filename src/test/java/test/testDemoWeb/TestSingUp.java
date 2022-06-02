@@ -2,7 +2,7 @@ package test.testDemoWeb;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObject.RegisterPage;
+import page.RegisterPage;
 import test.AbstractTestInit;
 
 public class TestSingUp extends AbstractTestInit {
