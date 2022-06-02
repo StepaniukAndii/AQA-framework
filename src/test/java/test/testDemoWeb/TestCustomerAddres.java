@@ -1,5 +1,6 @@
 package test.testDemoWeb;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObject.DemoWebCustomerInfo;
 import pageObject.RegisterPage;
@@ -14,8 +15,10 @@ public class TestCustomerAddres extends AbstractTestInit {
         demoWebCustomerInfo.goToCustomerInfo();
         demoWebCustomerInfo.clickAdress().click();
         demoWebCustomerInfo.clickAddNew().click();
-        demoWebCustomerInfo.getEntrFirstName().sendKeys(createRandomNumber() + "TestUserName");
-        demoWebCustomerInfo.getEntrLastName().sendKeys(createRandomNumber() + "TestUserLastName");
+        String firstName = createRandomNumber() + "TestUserName";
+        String lastName = createRandomNumber() + "TestUserLastName";
+        demoWebCustomerInfo.getEntrFirstName().sendKeys(firstName);
+        demoWebCustomerInfo.getEntrLastName().sendKeys(lastName);
         demoWebCustomerInfo.getEntrEmail().sendKeys(createRandomNumber() + "sergadovlol@gmail.com");
         demoWebCustomerInfo.clickDownList().click();
         demoWebCustomerInfo.clickIndia().click();
@@ -23,6 +26,8 @@ public class TestCustomerAddres extends AbstractTestInit {
         demoWebCustomerInfo.getEntrAdress1().sendKeys("nikolska");
         demoWebCustomerInfo.getEntrZipPostalcode().sendKeys("54001");
         demoWebCustomerInfo.getEntrPhoneNumber().sendKeys("0936192813");
-        demoWebCustomerInfo.clickBtnSave();
+        demoWebCustomerInfo.clickBtnSave().click();
+
+        Assert.assertEquals(firstName + lastName, demoWebCustomerInfo.expectedFirstName().getText().replaceAll(" ", ""));
     }
 }

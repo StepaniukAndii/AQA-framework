@@ -85,4 +85,12 @@ public class DemoWebCustomerInfo extends BasePage {
         demoWebCustomerInfo.getEntrPassForLogin().sendKeys(registerPage.pass());
         demoWebCustomerInfo.clickLogIn().click();
     }
+
+    public WebElement expectedFirstName() {
+        return weitVisibleOfElement("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div/div[1]/strong");
+    }
+
+    public WebElement expectedEmail() {
+        return weitVisibleOfElement("//*[@href=\"/customer/info\"][@class='account']");
+    }
 }
