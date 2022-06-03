@@ -1,3 +1,4 @@
 .idea
 AQA-framework.iml
-/target
+.target/
+target/
