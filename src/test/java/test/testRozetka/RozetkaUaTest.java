@@ -76,8 +76,8 @@ public class RozetkaUaTest extends AbstractTestInit {
         Thread.sleep(4000);
         doingOrderPage.getUserSurnameName().click();
 
-        Assert.assertTrue(doingOrderPage.errorKirylicaSurname().isDisplayed());
-        Assert.assertTrue(doingOrderPage.errorKirylicaName().isDisplayed());
-        Assert.assertTrue(doingOrderPage.errorPhoneNumber().isDisplayed());
+        Assert.assertEquals(doingOrderPage.errorKirylicaSurname().getText(), "Введите свою фамилию на кириллице");
+        Assert.assertEquals(doingOrderPage.errorKirylicaName().getText(), "Введите свое имя на кириллице");
+        Assert.assertEquals(doingOrderPage.errorPhoneNumber().getText(), "Введите номер мобильного телефона");
     }
 }

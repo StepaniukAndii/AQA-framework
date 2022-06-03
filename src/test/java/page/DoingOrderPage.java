@@ -58,18 +58,18 @@ public class DoingOrderPage extends HomeElementRozetka {
     }
 
     public WebElement getUserSurnameName() {
-        return getClickableElement("//div[contains(text(),' Moroz  Oleksandr ')]");
+        return getClickableElement("//div[contains(text(),'oroz  Oleksand')]");
     }
 
     public WebElement errorKirylicaSurname() {
-        return weitVisibleOfElement("//p[contains(text(),' Введите свою фамилию на кириллице ')]");
+        return getListVisibleElement("//form-error/p").get(0);
     }
 
     public WebElement errorKirylicaName() {
-        return weitVisibleOfElement("//p[contains(text(),' Введите свое имя на кириллице')]");
+        return getListVisibleElement("//form-error/p").get(1);
     }
 
     public WebElement errorPhoneNumber() {
-        return weitVisibleOfElement("//p[contains(text(),' Введите номер мобильного телефона')]");
+        return getListVisibleElement("//form-error/p").get(2);
     }
 }
