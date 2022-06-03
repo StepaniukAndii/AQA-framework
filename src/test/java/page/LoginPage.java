@@ -1,8 +1,7 @@
-package pageObject;
+package page;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import pageObject.BasePage;
 
 public class LoginPage extends BasePage {
 
