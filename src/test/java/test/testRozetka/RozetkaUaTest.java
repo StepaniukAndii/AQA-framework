@@ -1,12 +1,12 @@
 package test.testRozetka;
 
+import lombok.SneakyThrows;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObject.ByNotebook;
-import pageObject.HomeElementRozetka;
-import pageObject.UserElementRozetka;
-import pageObject.LoginPage;
+import page.*;
 import test.AbstractTestInit;
 
 public class RozetkaUaTest extends AbstractTestInit {
@@ -44,5 +44,40 @@ public class RozetkaUaTest extends AbstractTestInit {
         homeElementRozetka.getSearchLine().sendKeys("Ноутбук Xiaomi\n");
         ByNotebook byNotebook = new ByNotebook(driver);
         byNotebook.lowPrice();
+        byNotebook.openPageMiNotebookPro15().click();
+        byNotebook.addToBasket().click();
+        for (WebElement element : byNotebook.getClickSettingforGamer()) {
+            element.click();
+        }
+        byNotebook.getCheckoutBusket().click();
+        DoingOrderPage doingOrderPage = new DoingOrderPage(driver);
+        doingOrderPage.enterUserInfo();
+    }
+
+    @SneakyThrows
+    @Test
+    public void byXiaomi() {
+        HomeElementRozetka homeElementRozetka = new HomeElementRozetka(driver);
+        homeElementRozetka.goToRozetkaUaCeckout();
+        ByNotebook byNotebook = new ByNotebook(driver);
+        byNotebook.addToBasket().click();
+        byNotebook.getCheckoutBusket().click();
+        Thread.sleep(4000);
+        DoingOrderPage doingOrderPage = new DoingOrderPage(driver);
+        doingOrderPage.enterUserInfo();
+        doingOrderPage.getEnterYouCity().click();
+        doingOrderPage.getCityOdessa().click();
+        doingOrderPage.getEnterCityClick().click();
+        doingOrderPage.getPostOffice().click();
+        doingOrderPage.getAdressPostOffice().click();
+        doingOrderPage.choiceUser().click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,250)", "");
+        Thread.sleep(4000);
+        doingOrderPage.getUserSurnameName().click();
+
+        Assert.assertEquals(doingOrderPage.errorKirylicaSurname().getText(), "Введите свою фамилию на кириллице");
+        Assert.assertEquals(doingOrderPage.errorKirylicaName().getText(), "Введите свое имя на кириллице");
+        Assert.assertEquals(doingOrderPage.errorPhoneNumber().getText(), "Введите номер мобильного телефона");
     }
 }

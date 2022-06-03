@@ -4,11 +4,16 @@
 
     <listeners>
         <listener class-name="listner.TestListener" />
+        <listener class-name="listner.RetryTestListener"/>
     </listeners>
 
     <test name = "runwebsiteRozetka">
         <classes>
-            <class name = "test.testRozetka.RozetkaUaTest"/>
+            <class name = "test.testRozetka.RozetkaUaTest">
+                <methods>
+                    <include name="runRozetka"/>
+                </methods>
+            </class>
         </classes>
     </test>
 
