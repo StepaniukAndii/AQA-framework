@@ -2,8 +2,8 @@ package test.testDemoWeb;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObject.DemoWebCustomerInfo;
-import pageObject.RegisterPage;
+import page.DemoWebCustomerInfo;
+import page.RegisterPage;
 import test.AbstractTestInit;
 
 public class TestCustomerAddres extends AbstractTestInit {
