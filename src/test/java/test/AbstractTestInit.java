@@ -2,6 +2,7 @@ package test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import listner.TestListener;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -31,12 +32,13 @@ public abstract class AbstractTestInit {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(chromeOptions);
         logger.info("Finish set up driver");
+        driver.manage().window().setSize(new Dimension(1920, 1080));
     }
 
-//    @AfterMethod
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
+    }
 
     public WebDriver getDriver() {
         return driver;

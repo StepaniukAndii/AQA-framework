@@ -80,4 +80,18 @@ public class RozetkaUaTest extends AbstractTestInit {
         Assert.assertEquals(doingOrderPage.errorKirylicaName().getText(), "Введите свое имя на кириллице");
         Assert.assertEquals(doingOrderPage.errorPhoneNumber().getText(), "Введите номер мобильного телефона");
     }
+
+    @SneakyThrows
+    @Test
+    public void displayProductElementsinPage() {
+        HomeElementRozetka homeElementRozetka = new HomeElementRozetka(driver);
+        homeElementRozetka.goToRozetkaUa();
+        PlayStationList playStationList = new PlayStationList(driver);
+        playStationList.getOpenPageforeGamers().get(18).click();
+        playStationList.getconsolesPlayStation().click();
+        playStationList.getClickcheckBoxPS5().click();
+        Thread.sleep(4000);
+
+        Assert.assertEquals(playStationList.getListElementPS5().size(), 17);
+    }
 }
