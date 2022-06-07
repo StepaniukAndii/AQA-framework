@@ -92,6 +92,6 @@ public class RozetkaUaTest extends AbstractTestInit {
         playStationList.getClickcheckBoxPS5().click();
         Thread.sleep(4000);
 
-        Assert.assertTrue(playStationList.getListElementPS5().size() == 17);
+        Assert.assertEquals(playStationList.getListElementPS5().size(), 17);
     }
 }
