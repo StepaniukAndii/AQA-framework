@@ -33,10 +33,10 @@ public abstract class AbstractTestInit {
         logger.info("Finish set up driver");
     }
 
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void tearDown() {
+//        driver.quit();
+//    }
 
     public WebDriver getDriver() {
         return driver;

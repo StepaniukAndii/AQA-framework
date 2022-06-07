@@ -1,9 +1,7 @@
-package pageObject;
+package page;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import page.BasePage;
-import page.RegisterPage;
 
 public class DemoWebCustomerInfo extends BasePage {
 

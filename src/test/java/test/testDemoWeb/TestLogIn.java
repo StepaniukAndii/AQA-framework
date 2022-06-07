@@ -2,7 +2,7 @@ package test.testDemoWeb;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObject.DemoWebCustomerInfo;
+import page.DemoWebCustomerInfo;
 import test.AbstractTestInit;
 
 public class TestLogIn extends AbstractTestInit {
