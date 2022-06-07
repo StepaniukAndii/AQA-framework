@@ -9,7 +9,7 @@ import test.AbstractTestInit;
 public class TestLanguage extends AbstractTestInit {
 
     @Test
-    public void selectLanguageRU(){
+    public void getLanguageRU() {
         ChangeLanguage changeLanguage = new ChangeLanguage(driver);
         changeLanguage.goToRozetkaUa();
         changeLanguage.langRu().click();
@@ -19,7 +19,7 @@ public class TestLanguage extends AbstractTestInit {
     }
 
     @Test
-    public void selectLanguageUA(){
+    public void getLanguageUA() {
         ChangeLanguage changeLanguage = new ChangeLanguage(driver);
         changeLanguage.goToRozetkaUa();
         changeLanguage.langUa().click();
@@ -28,9 +28,8 @@ public class TestLanguage extends AbstractTestInit {
         Assert.assertEquals(getUrl(), "https://rozetka.com.ua/ua/");
     }
 
-    ////////////burger btn check///////////////////////
     @Test
-    public void checkLanguageInBurgerBtnUA(){
+    public void checkLanguageInBurgerBtnUA() {
         ChangeLanguage changeLanguage = new ChangeLanguage(driver);
         changeLanguage.goToRozetkaUa();
         changeLanguage.clickBurgerBtn().click();
@@ -41,7 +40,7 @@ public class TestLanguage extends AbstractTestInit {
     }
 
     @Test
-    public void checkLanguageInBurgerBtnRU(){
+    public void checkLanguageInBurgerBtnRU() {
         ChangeLanguage changeLanguage = new ChangeLanguage(driver);
         changeLanguage.goToRozetkaUa();
         changeLanguage.clickBurgerBtn().click();
