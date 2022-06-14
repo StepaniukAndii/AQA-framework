@@ -2,6 +2,7 @@ package page;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 public class HomeElementRozetka extends BasePage {
     public HomeElementRozetka(WebDriver driver) {
@@ -18,5 +19,9 @@ public class HomeElementRozetka extends BasePage {
 
     public WebElement getSearchLine() {
         return weitVisibleOfElement("//input[@name='search']");
+    }
+
+    public WebElement getCatalogElement() {
+        return weitVisibleOfElement("//ul[@class=\"catalog-grid ng-star-inserted\"]/li");
     }
 }
