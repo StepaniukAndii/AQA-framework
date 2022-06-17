@@ -24,4 +24,8 @@ public class HomeElementRozetka extends BasePage {
     public WebElement getCatalogElement() {
         return weitVisibleOfElement("//ul[@class=\"catalog-grid ng-star-inserted\"]/li");
     }
+
+    public void getPrintInSearchLine(String str) {
+        getSearchLine().sendKeys(str + "\n");
+    }
 }
