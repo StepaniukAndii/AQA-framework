@@ -1,5 +1,6 @@
 package listner;
 
+import io.qameta.allure.Attachment;
 import lombok.SneakyThrows;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -35,6 +36,7 @@ public class TestListener implements ITestListener {
         screenAfterSkip(driver);
     }
 
+    @Attachment
     private void screenAfterSkip(WebDriver driver) throws IOException {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(scrFile, new File("target/screen//" + scrFile.getName()));
