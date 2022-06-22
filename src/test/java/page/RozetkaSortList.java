@@ -10,13 +10,7 @@ public class RozetkaSortList extends HomeElementRozetka {
     public RozetkaSortList(WebDriver driver) {
         super(driver);
     }
-//    public void getListItems(){
-//        RozetkaSortList rozetkaSortList = new RozetkaSortList(driver);
-//        rozetkaSortList.goToRozetkaUa();
-////        List<WebElement> productList = driver.findElements(By.xpath("//li[@class=\"catalog-grid__cell catalog-grid__cell_type_slim ng-star-inserted"));
-////        int priceProduct = productList.
-//
-//    }
+
 
     public void clickSortPrice() {
         WebElement dropDown = getClickableElement("//select");
