@@ -12,7 +12,6 @@
             <package name="test.iconFilderTest"/>
             <package name="test.testDemoWeb"/>
             <package name="test.testRozetka"/>
-            <package name="test.uaSerial"/>
             <package name="test.xboxNow"/>
         </packages>
     </test>

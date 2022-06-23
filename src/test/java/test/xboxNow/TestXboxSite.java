@@ -1,22 +1,17 @@
 package test.xboxNow;
 
 import lombok.SneakyThrows;
-import lombok.ToString;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import page.CheckLowPrise;
 import page.DealsPageXboXNow;
 import page.GoPageWitcher3;
 import page.HomePageXboXNow;
 import test.AbstractTestInit;
-import page.CheckLowPrise;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Collection;
-
-import static org.testng.AssertJUnit.assertEquals;
 
 public class TestXboxSite extends AbstractTestInit {
 

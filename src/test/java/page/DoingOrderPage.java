@@ -58,7 +58,7 @@ public class DoingOrderPage extends HomeElementRozetka {
     }
 
     public WebElement getUserSurnameName() {
-        return getClickableElement("//div[contains(text(),'oroz  Oleksand')]");
+        return getClickableElement("//div[contains(text(),'Moroz  Oleksand')]");
     }
 
     public WebElement errorKirylicaSurname() {
