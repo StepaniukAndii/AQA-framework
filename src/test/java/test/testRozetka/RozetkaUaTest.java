@@ -30,7 +30,7 @@ public class RozetkaUaTest extends AbstractTestInit {
         actions.moveToElement(loginPage.getCheckBoxRemebmerMe(), -xOffset, 0).click().perform();
         loginPage.clickInput().click();
 
-        Assert.assertTrue(userElementRozetka.getdisplayedLogoUserBtn().isDisplayed());
+        Assert.assertTrue(userElementRozetka.getdisplayedLogoUserBtn().isDisplayed(), "");
         Assert.assertTrue(userElementRozetka.getdisplayedEnterEmailLine().isDisplayed());
         Assert.assertTrue(userElementRozetka.getdisplayedEnterPassLine().isDisplayed());
         Assert.assertTrue(userElementRozetka.getdisplayedRememberMeCheckBox().isDisplayed());
