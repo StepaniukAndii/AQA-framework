@@ -31,7 +31,7 @@ public class ByNotebook extends HomeElementRozetka {
     }
 
     public WebElement getCheckoutBusket() {
-        return getClickableElement("//a[@href='https://rozetka.com.ua/checkout/']");
+        return getClickableElement("//a[@href='https://rozetka.com.ua/checkout/'][@class='button button_size_large button_color_green cart-receipt__submit ng-star-inserted']");
     }
 
 }

@@ -63,7 +63,6 @@ public class RozetkaUaTest extends AbstractTestInit {
         homeElementRozetka.goToRozetkaUaCeckout();
         ByNotebook byNotebook = new ByNotebook(driver);
         byNotebook.addToBasket().click();
-        Thread.sleep(4000);
         byNotebook.getCheckoutBusket().click();
         Thread.sleep(4000);
         DoingOrderPage doingOrderPage = new DoingOrderPage(driver);
