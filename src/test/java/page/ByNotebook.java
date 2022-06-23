@@ -18,6 +18,7 @@ public class ByNotebook extends HomeElementRozetka {
     }
 
     public WebElement openPageMiNotebookPro15() {
+//        return getClickableElement("//a[@title='Ноутбук Xiaomi Mi Notebook Pro 15.6\" (JYU4331CN) Silver'][@href='https://rozetka.com.ua/ua/xiaomi-jyu4331cn/p311453203/']");
         return getClickableElement("/html/body/app-root/div/div/rz-category/div/main/rz-catalog/div/div/section/rz-grid/ul/li[3]/rz-catalog-tile/app-goods-tile-default/div/div[2]/a[2]");
     }
 

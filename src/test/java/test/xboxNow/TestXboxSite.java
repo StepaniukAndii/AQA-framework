@@ -57,6 +57,6 @@ public class TestXboxSite extends AbstractTestInit {
         System.out.println(deleteRUB);
         System.out.println(min);
 
-        Assert.assertEquals(min, 41.53);
+        Assert.assertEquals(min, 39.88);
     }
 }

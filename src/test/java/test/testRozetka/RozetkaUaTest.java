@@ -30,22 +30,24 @@ public class RozetkaUaTest extends AbstractTestInit {
         actions.moveToElement(loginPage.getCheckBoxRemebmerMe(), -xOffset, 0).click().perform();
         loginPage.clickInput().click();
 
-        Assert.assertTrue(userElementRozetka.getdisplayedLogoUserBtn().isDisplayed(), "");
+        Assert.assertTrue(userElementRozetka.getdisplayedLogoUserBtn().isDisplayed());
         Assert.assertTrue(userElementRozetka.getdisplayedEnterEmailLine().isDisplayed());
         Assert.assertTrue(userElementRozetka.getdisplayedEnterPassLine().isDisplayed());
-        Assert.assertTrue(userElementRozetka.getdisplayedRememberMeCheckBox().isDisplayed());
+        Assert.assertFalse(userElementRozetka.getdisplayedRememberMeCheckBox().isDisplayed());
         Assert.assertTrue(userElementRozetka.getdisplayedInputBtn().isDisplayed());
     }
 
+    @SneakyThrows
     @Test
     public void byProduct() {
         HomeElementRozetka homeElementRozetka = new HomeElementRozetka(driver);
         homeElementRozetka.goToRozetkaUa();
-        homeElementRozetka.getSearchLine().sendKeys("Ноутбук Xiaomi\n");
+        homeElementRozetka.getSearchLine().sendKeys("Laptop Xiaomi\n");
         ByNotebook byNotebook = new ByNotebook(driver);
         byNotebook.lowPrice();
         byNotebook.openPageMiNotebookPro15().click();
         byNotebook.addToBasket().click();
+        Thread.sleep(4000);
         for (WebElement element : byNotebook.getClickSettingforGamer()) {
             element.click();
         }
@@ -61,6 +63,7 @@ public class RozetkaUaTest extends AbstractTestInit {
         homeElementRozetka.goToRozetkaUaCeckout();
         ByNotebook byNotebook = new ByNotebook(driver);
         byNotebook.addToBasket().click();
+        Thread.sleep(4000);
         byNotebook.getCheckoutBusket().click();
         Thread.sleep(4000);
         DoingOrderPage doingOrderPage = new DoingOrderPage(driver);
