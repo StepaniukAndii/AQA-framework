@@ -1,5 +1,7 @@
 package test;
 
+import helper.Browser;
+import helper.SelectBrowser;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import listner.TestListener;
 import org.openqa.selenium.Dimension;
@@ -29,8 +31,15 @@ public abstract class AbstractTestInit {
         if (headless.contains("true")) {
             chromeOptions.setHeadless(true);
         }
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver(chromeOptions);
+
+        String browser = System.getProperty("browser");
+        if (browser == null || browser.equals("chrome")) {
+            driver = SelectBrowser.setUpDriver(Browser.CHROME);
+        } else if (browser.equals("opera")){
+            driver = SelectBrowser.setUpDriver(Browser.OPERA);
+        } else if (browser.equals("firefox"))
+            driver = SelectBrowser.setUpDriver(Browser.FIREFOX);
+
         logger.info("Finish set up driver");
         driver.manage().window().setSize(new Dimension(1920, 1080));
     }

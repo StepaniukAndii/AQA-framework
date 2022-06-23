@@ -36,7 +36,6 @@ public class TestListener implements ITestListener {
         screenAfterSkip(driver);
     }
 
-    @Attachment
     private void screenAfterSkip(WebDriver driver) throws IOException {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(scrFile, new File("target/screen//" + scrFile.getName()));
