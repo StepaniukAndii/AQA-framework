@@ -3,6 +3,8 @@ package page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class DemoWebCustomerInfo extends BasePage {
 
     public DemoWebCustomerInfo(WebDriver driver) {
@@ -92,5 +94,14 @@ public class DemoWebCustomerInfo extends BasePage {
 
     public WebElement expectedEmail() {
         return weitVisibleOfElement("//*[@href=\"/customer/info\"][@class='account']");
+    }
+    public WebElement clickBtnBooks(){
+        return getClickableElement("//*[@href=\"/books\"]");
+    }
+    public void sortByHighToLow(){
+        driver.get("http://demowebshop.tricentis.com/books?pagesize=8&orderby=11");
+    }
+    public List<WebElement> checkSrot(){
+        return getListVisibleElement("//*[@class='price actual-price']");
     }
 }
