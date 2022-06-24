@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestSuite_3">
+
+    <listeners>
+        <listener class-name="listner.TestListener"/>
+        <listener class-name="listner.RetryTestListener"/>
+    </listeners>
+
+    <test name="runwebsiteDemoWeb">
+        <packages>
+            <package name="test.testDemoWeb"/>
+        </packages>
+    </test>
+</suite>
