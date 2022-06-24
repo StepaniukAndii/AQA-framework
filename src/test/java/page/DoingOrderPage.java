@@ -38,7 +38,7 @@ public class DoingOrderPage extends HomeElementRozetka {
     }
 
     public WebElement getCityOdessa() {
-        return getClickableElement("//a[contains(text(),'Одесса')]");
+        return getClickableElement("/html/body/app-root/single-modal-window/div[3]/div[2]/rz-modal/common-city/ul/li[3]/a");
     }
 
     public WebElement getEnterCityClick() {
@@ -58,7 +58,7 @@ public class DoingOrderPage extends HomeElementRozetka {
     }
 
     public WebElement getUserSurnameName() {
-        return getClickableElement("//div[contains(text(),'oroz  Oleksand')]");
+        return getClickableElement("//div[contains(text(),'Moroz  Oleksand')]");
     }
 
     public WebElement errorKirylicaSurname() {
