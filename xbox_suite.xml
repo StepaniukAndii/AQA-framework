@@ -1,18 +1,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="TestSuite1">
+<suite name="TestSuite_1">
 
     <listeners>
         <listener class-name="listner.TestListener"/>
         <listener class-name="listner.RetryTestListener"/>
     </listeners>
 
-    <test name="runwebsiteRozetka">
+    <test name="runwebsiteXbox">
         <packages>
-            <package name="test.iconFilderTest"/>
-            <package name="test.testDemoWeb"/>
-            <package name="test.testRozetka"/>
-            <package name="test.uaSerial"/>
             <package name="test.xboxNow"/>
         </packages>
     </test>
