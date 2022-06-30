@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestSuite_4">
+
+    <listeners>
+        <listener class-name="listner.TestListener"/>
+        <listener class-name="listner.RetryTestListener"/>
+    </listeners>
+
+    <test name="runwebsiteiconfinder">
+        <packages>
+            <package name="test.iconFilderTest"/>
+        </packages>
+    </test>
+</suite>
