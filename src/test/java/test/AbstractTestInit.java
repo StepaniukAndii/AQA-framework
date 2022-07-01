@@ -33,19 +33,19 @@ public abstract class AbstractTestInit {
         String browser = System.getProperty("browser");
         if (browser == null || browser.equals("chrome")) {
             driver = SelectBrowser.setUpDriver(Browser.CHROME);
-        } else if (browser.equals("opera")){
+        } else if (browser.equals("opera")) {
             driver = SelectBrowser.setUpDriver(Browser.OPERA);
         } else if (browser.equals("firefox"))
             driver = SelectBrowser.setUpDriver(Browser.FIREFOX);
 
         logger.info("Finish set up driver");
-        driver.manage().window().setSize(new Dimension(1920, 1080));
+        driver.manage().window().maximize();
     }
 
-//    @AfterMethod
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
+    }
 
     public WebDriver getDriver() {
         return driver;
