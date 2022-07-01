@@ -15,9 +15,11 @@ public class TidexPage extends BasePage {
     public WebElement iFrame() {
         return getPresentElement("/html/body/div[1]/div/div/main/div/div[3]/div/div[3]/div/iframe");
     }
+
     public WebElement clickSwitchSizeBtn() {
         return getClickableElement("//*[@class='button-1SoiPS-f']");
     }
+
     public void iframeSwitchSizeBtn() {
         driver.switchTo().frame(iFrame());
         clickSwitchSizeBtn().click();
