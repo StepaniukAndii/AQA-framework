@@ -3,7 +3,7 @@ package page.rozetkaPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class DoingOrderPage extends HomeElementRozetka {
+public class DoingOrderPage extends HomeElementRozetkaPage {
     public DoingOrderPage(WebDriver driver) {
         super(driver);
     }

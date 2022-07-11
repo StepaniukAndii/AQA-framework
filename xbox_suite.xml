@@ -9,7 +9,7 @@
 
     <test name="runwebsiteXbox">
         <packages>
-            <package name="test.xboxNow"/>
+            <package name="test.xboxNowTest"/>
         </packages>
     </test>
 </suite>
