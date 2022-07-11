@@ -9,7 +9,7 @@
 
     <test name="runwebsiteRozetka">
         <packages>
-            <package name="test.testRozetka"/>
+            <package name="test.rozetkaTest"/>
         </packages>
     </test>
 </suite>

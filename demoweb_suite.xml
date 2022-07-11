@@ -9,7 +9,7 @@
 
     <test name="runwebsiteDemoWeb">
         <packages>
-            <package name="test.testDemoWeb"/>
+            <package name="test.demoWebTest"/>
         </packages>
     </test>
 </suite>
