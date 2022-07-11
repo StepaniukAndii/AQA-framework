@@ -1,8 +1,9 @@
-package page;
+package page.xboxPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import page.BasePage;
 
 import java.util.List;
 
@@ -19,10 +20,10 @@ public class DealsPageXboXNow extends BasePage {
     }
 
     public List<WebElement> getClickBtnWitcher3() {
-        return getListVisibleElement("//*[@class=\"btn btn-block btn-success btn-flat\"]");
+        return getListPrecenceElement("//*[@class=\"btn btn-block btn-success btn-flat\"]");
     }
 
     public WebElement getdisplayedBtnWitcher3() {
-        return getPresentElement("//*[@class=\"btn btn-block btn-success btn-flat\"]");
+        return getPrecenceElement("//*[@class=\"btn btn-block btn-success btn-flat\"]");
     }
 }

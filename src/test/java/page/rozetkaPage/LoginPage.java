@@ -1,7 +1,8 @@
-package page;
+package page.rozetkaPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import page.BasePage;
 
 public class LoginPage extends BasePage {
 
@@ -22,15 +23,15 @@ public class LoginPage extends BasePage {
     }
 
     public WebElement enterEmail() {
-        return weitVisibleOfElement("//*[@id=\"auth_email\"]");
+        return getVisibleOfElement("//*[@id=\"auth_email\"]");
     }
 
     public WebElement enterPass() {
-        return weitVisibleOfElement("//*[@id=\"auth_pass\"]");
+        return getVisibleOfElement("//*[@id=\"auth_pass\"]");
     }
 
     public WebElement getCheckBoxRemebmerMe() {
-        return getPresentElement("//input[@type='checkbox']");
+        return getPrecenceElement("//input[@type='checkbox']");
     }
 
     public WebElement clickInput() {

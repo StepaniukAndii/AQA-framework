@@ -1,7 +1,8 @@
-package page;
+package page.rozetkaPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import page.BasePage;
 
 public class UserElementRozetka extends BasePage {
 
@@ -14,22 +15,22 @@ public class UserElementRozetka extends BasePage {
     }
 
     public WebElement getdisplayedLogoUserBtn() {
-        return getPresentElement("//button[@class='header__button ng-star-inserted']");
+        return getPrecenceElement("//button[@class='header__button ng-star-inserted']");
     }
 
     public WebElement getdisplayedEnterEmailLine() {
-        return getPresentElement("//*[@id=\"auth_email\"]");
+        return getPrecenceElement("//*[@id=\"auth_email\"]");
     }
 
     public WebElement getdisplayedEnterPassLine() {
-        return getPresentElement("//*[@id=\"auth_pass\"]");
+        return getPrecenceElement("//*[@id=\"auth_pass\"]");
     }
 
     public WebElement getdisplayedRememberMeCheckBox() {
-        return getPresentElement("//input[@type='checkbox']");
+        return getPrecenceElement("//input[@type='checkbox']");
     }
 
     public WebElement getdisplayedInputBtn() {
-        return getPresentElement("//button[@class='button button--large button--green auth-modal__submit ng-star-inserted']");
+        return getPrecenceElement("//button[@class='button button--large button--green auth-modal__submit ng-star-inserted']");
     }
 }

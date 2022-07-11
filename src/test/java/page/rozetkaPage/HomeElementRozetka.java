@@ -1,8 +1,8 @@
-package page;
+package page.rozetkaPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.Test;
+import page.BasePage;
 
 public class HomeElementRozetka extends BasePage {
     public HomeElementRozetka(WebDriver driver) {
@@ -18,11 +18,11 @@ public class HomeElementRozetka extends BasePage {
     }
 
     public WebElement getSearchLine() {
-        return weitVisibleOfElement("//input[@name='search']");
+        return getVisibleOfElement("//input[@name='search']");
     }
 
     public WebElement getCatalogElement() {
-        return weitVisibleOfElement("//ul[@class=\"catalog-grid ng-star-inserted\"]/li");
+        return getVisibleOfElement("//ul[@class=\"catalog-grid ng-star-inserted\"]/li");
     }
 
     public void getPrintInSearchLine(String str) {

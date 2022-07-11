@@ -1,20 +1,20 @@
-package test.TestIframe;
+package test.MezhaSite;
 
 import lombok.SneakyThrows;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.MezhaTestIframe;
+import page.mezhaPage.MezhaTestIframe;
 import test.AbstractTestInit;
 
 
-public class IframeTest extends AbstractTestInit {
+public class MezhaIframeTest extends AbstractTestInit {
 
     @SneakyThrows
     @Test
     public void mezhaIframe() {
         MezhaTestIframe mezhaTestIframe = new MezhaTestIframe(driver);
-        mezhaTestIframe.goMezhaNews();
+        mezhaTestIframe.goMezhaNewsIframe();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,1000)");
         mezhaTestIframe.playVideo();
@@ -22,7 +22,6 @@ public class IframeTest extends AbstractTestInit {
         mezhaTestIframe.stopVideo();
         double timeToVideo = Double.parseDouble(mezhaTestIframe.timeToVideo().getText().replace(":", "."));
 
-        Assert.assertTrue(timeToVideo <= 0.07);
-        Assert.assertTrue(timeToVideo >= 0.03);
+        Assert.assertTrue(timeToVideo <= 0.07 && timeToVideo >= 0.03);
     }
 }

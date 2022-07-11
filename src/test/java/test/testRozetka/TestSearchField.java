@@ -2,7 +2,7 @@ package test.testRozetka;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.RozetkaSearchField;
+import page.rozetkaPage.RozetkaSearchField;
 import test.AbstractTestInit;
 
 public class TestSearchField extends AbstractTestInit {

@@ -1,4 +1,4 @@
-package page;
+package page.rozetkaPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,19 +9,19 @@ public class DoingOrderPage extends HomeElementRozetka {
     }
 
     public WebElement enterYouSurname() {
-        return weitVisibleOfElement("//input[@formcontrolname='surname']");
+        return getVisibleOfElement("//input[@formcontrolname='surname']");
     }
 
     public WebElement enterYouName() {
-        return weitVisibleOfElement("//input[@formcontrolname='name']");
+        return getVisibleOfElement("//input[@formcontrolname='name']");
     }
 
     public WebElement enterYouPhone() {
-        return weitVisibleOfElement("//input[@formcontrolname='phone']");
+        return getVisibleOfElement("//input[@formcontrolname='phone']");
     }
 
     public WebElement enterYouEmail() {
-        return weitVisibleOfElement("//input[@class='ng-pristine ng-invalid ng-star-inserted ng-touched']");
+        return getVisibleOfElement("//input[@class='ng-pristine ng-invalid ng-star-inserted ng-touched']");
     }
 
 
@@ -30,7 +30,6 @@ public class DoingOrderPage extends HomeElementRozetka {
         doingOrderPage.enterYouSurname().sendKeys("Oleksandr");
         doingOrderPage.enterYouName().sendKeys("Moroz");
         doingOrderPage.enterYouPhone().sendKeys("0545986357");
-//        doingOrderPage.enterYouEmail().sendKeys("morozok966@gmail.com");
     }
 
     public WebElement getEnterYouCity() {
@@ -62,14 +61,14 @@ public class DoingOrderPage extends HomeElementRozetka {
     }
 
     public WebElement errorKirylicaSurname() {
-        return getListVisibleElement("//form-error/p").get(0);
+        return getListPrecenceElement("//form-error/p").get(0);
     }
 
     public WebElement errorKirylicaName() {
-        return getListVisibleElement("//form-error/p").get(1);
+        return getListPrecenceElement("//form-error/p").get(1);
     }
 
     public WebElement errorPhoneNumber() {
-        return getListVisibleElement("//form-error/p").get(2);
+        return getListPrecenceElement("//form-error/p").get(2);
     }
 }

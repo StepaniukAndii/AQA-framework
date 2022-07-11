@@ -2,7 +2,7 @@ package test.testRozetka;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.ChangeLanguage;
+import page.rozetkaPage.ChangeLanguage;
 import test.AbstractTestInit;
 
 

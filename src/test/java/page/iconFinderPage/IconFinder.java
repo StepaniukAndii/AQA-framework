@@ -1,11 +1,12 @@
-package page;
+package page.iconFinderPage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import page.BasePage;
 
-public class IconFinder extends BasePage{
+public class IconFinder extends BasePage {
     public IconFinder(WebDriver driver) {
         super(driver);
     }

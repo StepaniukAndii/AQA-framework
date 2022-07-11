@@ -2,7 +2,7 @@ package test.TidexcomTest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.TidexPage;
+import page.tidexPage.TidexPage;
 import test.AbstractTestInit;
 
 public class TidexTest extends AbstractTestInit {

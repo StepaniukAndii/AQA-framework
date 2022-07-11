@@ -1,7 +1,8 @@
-package page;
+package page.tidexPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import page.BasePage;
 
 public class TidexPage extends BasePage {
     public TidexPage(WebDriver driver) {
@@ -13,7 +14,7 @@ public class TidexPage extends BasePage {
     }
 
     public WebElement iFrame() {
-        return getPresentElement("/html/body/div[1]/div/div/main/div/div[3]/div/div[3]/div/iframe");
+        return getPrecenceElement("/html/body/div[1]/div/div/main/div/div[3]/div/div[3]/div/iframe");
     }
 
     public WebElement clickSwitchSizeBtn() {
@@ -26,10 +27,10 @@ public class TidexPage extends BasePage {
     }
 
     public WebElement getMinTablet() {
-        return weitVisibleOfElement("//*[@class='chart-gui-wrapper']");
+        return getVisibleOfElement("//*[@class='chart-gui-wrapper']");
     }
 
     public WebElement getMaxTablet() {
-        return weitVisibleOfElement("//*[@class='chart-gui-wrapper']");
+        return getVisibleOfElement("//*[@class='chart-gui-wrapper']");
     }
 }
