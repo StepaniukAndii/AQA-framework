@@ -1,21 +1,21 @@
-package page;
+package page.mezhaPage;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import page.BasePage;
 
 public class MezhaTestIframe extends BasePage {
     public MezhaTestIframe(WebDriver driver) {
         super(driver);
     }
 
-    public void goMezhaNews() {
+    public void goMezhaNewsIframe() {
         driver.get("https://mezha.media/2022/06/20/nezvychaynyy-svit-vid-disney-ukrainskyy-treyler/");
     }
 
     public WebElement iFrame() {
-        return getPresentElement("//iframe[@class='embed-responsive-item lazy-loaded']");
+        return getPrecenceElement("//iframe[@class='embed-responsive-item lazy-loaded']");
     }
 
     public WebElement playToVideo() {
@@ -32,6 +32,6 @@ public class MezhaTestIframe extends BasePage {
     }
 
     public WebElement timeToVideo() {
-        return getPresentElement("//span[@class='ytp-time-current']");
+        return getPrecenceElement("//span[@class='ytp-time-current']");
     }
 }

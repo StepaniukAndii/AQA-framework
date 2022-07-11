@@ -3,7 +3,7 @@ package test.testDemoWeb;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.DemoWebCustomerInfo;
+import page.demoWebPage.DemoWebCustomerInfo;
 import test.AbstractTestInit;
 
 import java.util.ArrayList;

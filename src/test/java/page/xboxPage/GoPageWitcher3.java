@@ -1,7 +1,6 @@
-package page;
+package page.xboxPage;
 
 import org.openqa.selenium.WebDriver;
-import page.CheckLowPrise;
 
 public class GoPageWitcher3 extends CheckLowPrise {
     public GoPageWitcher3(WebDriver driver) {

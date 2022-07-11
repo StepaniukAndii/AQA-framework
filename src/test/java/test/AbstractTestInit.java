@@ -3,7 +3,6 @@ package test;
 import helper.Browser;
 import helper.SelectBrowser;
 import listner.TestListener;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.slf4j.Logger;
@@ -33,14 +32,17 @@ public abstract class AbstractTestInit {
         String browser = System.getProperty("browser");
         if (browser == null || browser.equals("chrome")) {
             driver = SelectBrowser.setUpDriver(Browser.CHROME);
-        } else if (browser.equals("opera")) {
-            driver = SelectBrowser.setUpDriver(Browser.OPERA);
-        } else if (browser.equals("firefox"))
+        } else if (browser.equals("edge")) {
+            driver = SelectBrowser.setUpDriver(Browser.EDGE);
+        } else if (browser.equals("firefox")){
             driver = SelectBrowser.setUpDriver(Browser.FIREFOX);
+        } else if (browser.equals("opera"))
+            driver = SelectBrowser.setUpDriver(Browser.OPERA);
 
         logger.info("Finish set up driver");
         driver.manage().window().maximize();
     }
+
 
     @AfterMethod
     public void tearDown() {

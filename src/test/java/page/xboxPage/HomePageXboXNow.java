@@ -1,7 +1,8 @@
-package page;
+package page.xboxPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import page.BasePage;
 
 public class HomePageXboXNow extends BasePage {
     public HomePageXboXNow(WebDriver driver) {

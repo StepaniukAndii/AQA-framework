@@ -1,4 +1,4 @@
-package page;
+package page.xboxPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,6 +11,6 @@ public class CheckLowPrise extends DealsPageXboXNow {
     }
 
     public List<WebElement> checkSmallPrice() {
-        return getListVisibleElement("//*[@id='id12']//strong/span");
+        return getListPrecenceElement("//*[@id='id12']//strong/span");
     }
 }

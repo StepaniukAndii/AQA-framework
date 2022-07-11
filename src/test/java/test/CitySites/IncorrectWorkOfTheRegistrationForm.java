@@ -2,8 +2,8 @@ package test.CitySites;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.HomeCity;
-import page.RegFormCitySites;
+import page.citySitesPage.HomeCity;
+import page.citySitesPage.RegFormCitySites;
 import test.AbstractTestInit;
 
 public class IncorrectWorkOfTheRegistrationForm extends AbstractTestInit {

@@ -1,7 +1,8 @@
-package page;
+package page.demoWebPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import page.BasePage;
 
 public class RegisterPage extends BasePage {
     public RegisterPage(WebDriver driver) {
@@ -21,27 +22,27 @@ public class RegisterPage extends BasePage {
     }
 
     public WebElement getEntrFirstName() {
-        return weitVisibleOfElement("//*[contains(@id,\"FirstName\")]");
+        return getVisibleOfElement("//*[contains(@id,\"FirstName\")]");
     }
 
     public WebElement getEntrLastName() {
-        return weitVisibleOfElement("//*[contains(@id,\"LastName\")]");
+        return getVisibleOfElement("//*[contains(@id,\"LastName\")]");
     }
 
     public WebElement getEntrEmail() {
-        return weitVisibleOfElement("//*[contains(@id,\"Email\")]");
+        return getVisibleOfElement("//*[contains(@id,\"Email\")]");
     }
 
     public WebElement getEntrPass() {
-        return weitVisibleOfElement("//*[@id=\"Password\"]");
+        return getVisibleOfElement("//*[@id=\"Password\"]");
     }
 
     public WebElement getEntrConfirmPass() {
-        return weitVisibleOfElement("//*[@id=\"ConfirmPassword\"]");
+        return getVisibleOfElement("//*[@id=\"ConfirmPassword\"]");
     }
 
     public WebElement getRegisterBtn() {
-        return weitVisibleOfElement("//*[@id=\"register-button\"]");
+        return getVisibleOfElement("//*[@id=\"register-button\"]");
     }
 
     public void openRegisterPage() {

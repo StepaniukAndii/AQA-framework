@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.opera.OperaDriverService;
 
 public class SelectBrowser {
 
@@ -23,9 +22,13 @@ public class SelectBrowser {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
                 break;
-            case OPERA:
+            case EDGE:
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
+                break;
+            case OPERA:
+                WebDriverManager.operadriver().setup();
+                driver = new OperaDriver();
                 break;
         }
         return driver;

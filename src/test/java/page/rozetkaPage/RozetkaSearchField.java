@@ -1,4 +1,4 @@
-package page;
+package page.rozetkaPage;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;

@@ -1,4 +1,4 @@
-package page;
+package page.rozetkaPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +11,7 @@ public class PlayStationList extends HomeElementRozetka {
     }
 
     public List<WebElement> getOpenPageforeGamers() {
-        return getListVisibleElement("//li[@class='menu-categories__item ng-star-inserted']");
+        return getListPrecenceElement("//li[@class='menu-categories__item ng-star-inserted']");
     }
 
     public WebElement getconsolesPlayStation() {
@@ -23,6 +23,6 @@ public class PlayStationList extends HomeElementRozetka {
     }
 
     public List<WebElement> getListElementPS5() {
-        return getListVisibleElement("//div[@class='goods-tile__inner']");
+        return getListPrecenceElement("//div[@class='goods-tile__inner']");
     }
 }

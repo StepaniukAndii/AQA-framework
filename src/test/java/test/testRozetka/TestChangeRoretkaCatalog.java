@@ -2,8 +2,8 @@ package test.testRozetka;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.ChangeCatalogRozetka;
-import page.HomeElementRozetka;
+import page.rozetkaPage.ChangeCatalogRozetka;
+import page.rozetkaPage.HomeElementRozetka;
 import test.AbstractTestInit;
 
 public class TestChangeRoretkaCatalog extends AbstractTestInit {

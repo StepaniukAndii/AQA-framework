@@ -5,10 +5,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.CheckLowPrise;
-import page.DealsPageXboXNow;
-import page.GoPageWitcher3;
-import page.HomePageXboXNow;
+import page.xboxPage.CheckLowPrise;
+import page.xboxPage.DealsPageXboXNow;
+import page.xboxPage.GoPageWitcher3;
+import page.xboxPage.HomePageXboXNow;
 import test.AbstractTestInit;
 
 import java.util.ArrayList;

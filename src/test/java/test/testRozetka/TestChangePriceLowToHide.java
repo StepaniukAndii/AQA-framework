@@ -3,11 +3,10 @@ package test.testRozetka;
 import lombok.SneakyThrows;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-import page.RozetkaSortList;
+import page.rozetkaPage.RozetkaSortList;
 import test.AbstractTestInit;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class TestChangePriceLowToHide extends AbstractTestInit {
 

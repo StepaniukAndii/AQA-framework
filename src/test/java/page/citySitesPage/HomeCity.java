@@ -1,10 +1,11 @@
-package page;
+package page.citySitesPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import page.BasePage;
 
-public class HomeCity extends BasePage{
+public class HomeCity extends BasePage {
     public HomeCity(WebDriver driver) {
         super(driver);
     }

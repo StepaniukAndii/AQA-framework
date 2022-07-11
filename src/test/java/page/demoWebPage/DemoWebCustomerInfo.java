@@ -1,7 +1,8 @@
-package page;
+package page.demoWebPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import page.BasePage;
 
 import java.util.List;
 
@@ -20,15 +21,15 @@ public class DemoWebCustomerInfo extends BasePage {
     }
 
     public WebElement getEntrEmailForLogin() {
-        return weitVisibleOfElement("//*[contains(@id,\"Email\")][@class='email']");
+        return getVisibleOfElement("//*[contains(@id,\"Email\")][@class='email']");
     }
 
     public WebElement getEntrPassForLogin() {
-        return weitVisibleOfElement("//*[contains(@id,\"Password\")][@class='password']");
+        return getVisibleOfElement("//*[contains(@id,\"Password\")][@class='password']");
     }
 
     public WebElement clickLogIn() {
-        return weitVisibleOfElement("//*[contains(@value,\"Log in\")][@class='button-1 login-button']");
+        return getVisibleOfElement("//*[contains(@value,\"Log in\")][@class='button-1 login-button']");
     }
 
     public WebElement clickAdress() {
@@ -40,15 +41,15 @@ public class DemoWebCustomerInfo extends BasePage {
     }
 
     public WebElement getEntrFirstName() {
-        return weitVisibleOfElement("//*[contains(@id,\"Address_FirstName\")]");
+        return getVisibleOfElement("//*[contains(@id,\"Address_FirstName\")]");
     }
 
     public WebElement getEntrLastName() {
-        return weitVisibleOfElement("//*[contains(@id,\"Address_LastName\")]");
+        return getVisibleOfElement("//*[contains(@id,\"Address_LastName\")]");
     }
 
     public WebElement getEntrEmail() {
-        return weitVisibleOfElement("//*[contains(@id,\"Address_Email\")]");
+        return getVisibleOfElement("//*[contains(@id,\"Address_Email\")]");
     }
 
     public WebElement clickDownList() {
@@ -60,19 +61,19 @@ public class DemoWebCustomerInfo extends BasePage {
     }
 
     public WebElement getEntrCity() {
-        return weitVisibleOfElement("//*[@class='text-box single-line'][contains(@id,\"Address_City\")]");
+        return getVisibleOfElement("//*[@class='text-box single-line'][contains(@id,\"Address_City\")]");
     }
 
     public WebElement getEntrAdress1() {
-        return weitVisibleOfElement("//*[@class='text-box single-line'][contains(@id,\"Address_Address1\")]");
+        return getVisibleOfElement("//*[@class='text-box single-line'][contains(@id,\"Address_Address1\")]");
     }
 
     public WebElement getEntrZipPostalcode() {
-        return weitVisibleOfElement("//*[@class='text-box single-line'][contains(@id,\"Address_ZipPostalCode\")]");
+        return getVisibleOfElement("//*[@class='text-box single-line'][contains(@id,\"Address_ZipPostalCode\")]");
     }
 
     public WebElement getEntrPhoneNumber() {
-        return weitVisibleOfElement("//*[@class='text-box single-line'][contains(@id,\"Address_PhoneNumber\")]");
+        return getVisibleOfElement("//*[@class='text-box single-line'][contains(@id,\"Address_PhoneNumber\")]");
     }
 
     public WebElement clickBtnSave() {
@@ -89,11 +90,11 @@ public class DemoWebCustomerInfo extends BasePage {
     }
 
     public WebElement expectedFirstName() {
-        return weitVisibleOfElement("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div/div[1]/strong");
+        return getVisibleOfElement("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div/div[1]/strong");
     }
 
     public WebElement expectedEmail() {
-        return weitVisibleOfElement("//*[@href=\"/customer/info\"][@class='account']");
+        return getVisibleOfElement("//*[@href=\"/customer/info\"][@class='account']");
     }
     public WebElement clickBtnBooks(){
         return getClickableElement("//*[@href=\"/books\"]");
@@ -102,6 +103,6 @@ public class DemoWebCustomerInfo extends BasePage {
         driver.get("http://demowebshop.tricentis.com/books?pagesize=8&orderby=11");
     }
     public List<WebElement> checkSrot(){
-        return getListVisibleElement("//*[@class='price actual-price']");
+        return getListPrecenceElement("//*[@class='price actual-price']");
     }
 }

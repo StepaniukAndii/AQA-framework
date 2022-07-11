@@ -1,8 +1,9 @@
-package page;
+package page.rozetkaPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import page.rozetkaPage.HomeElementRozetka;
 
 import java.util.List;
 
@@ -19,6 +20,6 @@ public class RozetkaSortList extends HomeElementRozetka {
     }
 
     public List<WebElement> searchGoods() {
-        return getListVisibleElement("//span[@class=\"goods-tile__price-value\"]");
+        return getListPrecenceElement("//span[@class=\"goods-tile__price-value\"]");
     }
 }

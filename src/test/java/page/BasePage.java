@@ -11,13 +11,13 @@ import java.util.List;
 
 public class BasePage {
 
-    WebDriver driver;
+   public WebDriver driver;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public WebElement weitVisibleOfElement(String locator) {
+    public WebElement getVisibleOfElement(String locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
@@ -27,12 +27,12 @@ public class BasePage {
         return waitClick.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
     }
 
-    public List<WebElement> getListVisibleElement(String locator) {
+    public List<WebElement> getListPrecenceElement(String locator) {
         WebDriverWait waitClick = new WebDriverWait(driver, Duration.ofSeconds(15));
         return waitClick.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(locator)));
     }
 
-    public WebElement getPresentElement(String locator) {
+    public WebElement getPrecenceElement(String locator) {
         WebDriverWait waitClick = new WebDriverWait(driver, Duration.ofSeconds(15));
         return waitClick.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
     }
