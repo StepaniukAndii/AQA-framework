@@ -2,17 +2,17 @@ package test.iconFilderTest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.iconFinderPage.IconFinderPage;
+import page.iconFinderPage.IconFinderHomePage;
 import test.AbstractTestInit;
 
 public class IconFinderPageTest extends AbstractTestInit {
 
     @Test
-    public void btnTestTC(){
-        IconFinderPage iconFinderPage = new IconFinderPage(driver);
-        iconFinderPage.goToIconF();
-        iconFinderPage.icons().click();
+    public void btnTestTC() {
+        IconFinderHomePage iconFinderHomePage = new IconFinderHomePage(driver);
+        iconFinderHomePage.goToIconF();
+        iconFinderHomePage.icons().click();
 
-        Assert.assertTrue(iconFinderPage.isDispleyIcons());
+        Assert.assertTrue(iconFinderHomePage.isDispleyIcons());
     }
 }
