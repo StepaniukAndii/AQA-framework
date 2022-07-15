@@ -28,5 +28,8 @@ public class TestCustomerAddres extends AbstractTestInit {
         demoWebCustomerInfoPage.clickBtnSave().click();
 
         Assert.assertEquals(firstName + lastName, demoWebCustomerInfoPage.expectedFirstName().getText().replaceAll(" ", ""));
+
+        demoWebCustomerInfoPage.deleteBtn().click();
+        driver.switchTo().alert().accept();
     }
 }

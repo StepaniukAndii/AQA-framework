@@ -90,19 +90,26 @@ public class DemoWebCustomerInfoPage extends BasePage {
     }
 
     public WebElement expectedFirstName() {
-        return getVisibleOfElement("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div/div[1]/strong");
+        return getVisibleOfElement("//*[@class='center-2']//strong");
     }
 
     public WebElement expectedEmail() {
         return getVisibleOfElement("//*[@href=\"/customer/info\"][@class='account']");
     }
-    public WebElement clickBtnBooks(){
+
+    public WebElement clickBtnBooks() {
         return getClickableElement("//*[@href=\"/books\"]");
     }
-    public void sortByHighToLow(){
+
+    public void sortByHighToLow() {
         driver.get("http://demowebshop.tricentis.com/books?pagesize=8&orderby=11");
     }
-    public List<WebElement> checkSrot(){
+
+    public List<WebElement> checkSrot() {
         return getListPrecenceElement("//*[@class='price actual-price']");
+    }
+
+    public WebElement deleteBtn() {
+        return getClickableElement("//input[@type='button'][@class='button-2 delete-address-button']");
     }
 }
