@@ -37,4 +37,12 @@ public class LoginPage extends BasePage {
     public WebElement clickInput() {
         return getClickableElement("//button[@class='button button--large button--green auth-modal__submit ng-star-inserted']");
     }
+
+    public WebElement getSingInGoogle() {
+        return getClickableElement("//button[@class='button button--large button--gray button--with-icon auth-modal__social-button']");
+    }
+
+    public void getInputEmail() {
+        getVisibleOfElement("//input[@type='email']").sendKeys("sergadovlol@gmail.com", "\n");
+    }
 }
