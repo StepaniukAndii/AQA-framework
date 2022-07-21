@@ -6,32 +6,36 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import page.BasePage;
 
-public class IconFinderPage extends BasePage {
-    public IconFinderPage(WebDriver driver) {
+public class IconFinderHomePage extends BasePage {
+    public IconFinderHomePage(WebDriver driver) {
         super(driver);
     }
 
-    public void goToIconF(){
+    public void goToIconF() {
         driver.get("https://www.iconfinder.com/");
     }
 
-    public WebElement close(){
+    public WebElement close() {
         return getClickableElement("//button[@class='close p-4']");
     }
 
-    public boolean isDisplayClose(){
+    public boolean isDisplayClose() {
         try {
             driver.findElement(By.xpath("//button[@class='close p-4']"));
             return false;
-        }catch (NoSuchElementException e) {
+        } catch (NoSuchElementException e) {
             System.err.println("Icon Close click and not display");
             return true;
         }
 
     }
 
-    public WebElement icons(){
+    public WebElement icons() {
         return getClickableElement("//li[@class='nav-item']//a[@href='/icons']");
+    }
+
+    public WebElement illustration3d() {
+        return getClickableElement("//a[@href='/3d-illustrations'][@class='nav-link']");
     }
 
     public boolean isDispleyIcons() {
