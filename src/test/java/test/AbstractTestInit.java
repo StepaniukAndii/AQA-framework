@@ -62,6 +62,8 @@ public abstract class AbstractTestInit {
     protected String getUrl() {
         return driver.getCurrentUrl();
     }
+
+    protected void openUrl(String url) {
+        getDriver().get(url);
+    }
 }
-
-

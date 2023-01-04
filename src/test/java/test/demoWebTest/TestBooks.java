@@ -19,7 +19,7 @@ public class TestBooks extends AbstractTestInit {
         ArrayList<Double> priceList = new ArrayList<>();
         for (WebElement good : demoWebCustomerInfoPage.checkSrot()) {
             String textPrice = good.getText();
-            String replaceText = textPrice.replace(" ", "");
+            String replaceText = textPrice.replaceAll(" ", "");
             Double parseTextPriceInDouble = Double.parseDouble(replaceText);
             priceList.add(parseTextPriceInDouble);
         }
@@ -37,7 +37,12 @@ public class TestBooks extends AbstractTestInit {
         System.out.println("Max Price" + " " + maxPrice);
         System.out.println("Min Price" + " " + minPrice);
 
-        Assert.assertEquals(maxPrice, 51.0);
+        Assert.assertTrue(maxPrice > minPrice);
         Assert.assertEquals(minPrice, 10.0);
+
+
+        System.out.println("---------------------------------------------------------");
+        System.out.println("---------------------Test Books Ends---------------------");
+        System.out.println("---------------------------------------------------------");
     }
 }

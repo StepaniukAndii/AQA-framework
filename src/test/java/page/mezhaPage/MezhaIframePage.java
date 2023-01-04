@@ -22,9 +22,10 @@ public class MezhaIframePage extends BasePage {
         return getClickableElement("//button[@class='ytp-large-play-button ytp-button']");
     }
 
-    public void playVideo() {
+    public MezhaIframePage playVideo() {
         driver.switchTo().frame(iFrame());
         playToVideo().click();
+        return this;
     }
 
     public void stopVideo() {

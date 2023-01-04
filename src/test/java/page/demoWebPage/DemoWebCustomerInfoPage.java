@@ -28,8 +28,13 @@ public class DemoWebCustomerInfoPage extends BasePage {
         return getVisibleOfElement("//*[contains(@id,\"Password\")][@class='password']");
     }
 
-    public WebElement clickLogIn() {
+    public WebElement getLogIn() {
         return getVisibleOfElement("//*[contains(@value,\"Log in\")][@class='button-1 login-button']");
+    }
+
+    public DemoWebCustomerInfoPage clickLogIn() {
+        getLogIn().click();
+        return this;
     }
 
     public WebElement clickAdress() {
@@ -86,7 +91,7 @@ public class DemoWebCustomerInfoPage extends BasePage {
         demoWebCustomerInfoPage.getEntrEmailForLogin().sendKeys("sergadovlol@gmail.com");
         RegisterPage registerPage = new RegisterPage(driver);
         demoWebCustomerInfoPage.getEntrPassForLogin().sendKeys(registerPage.pass());
-        demoWebCustomerInfoPage.clickLogIn().click();
+        demoWebCustomerInfoPage.getLogIn().click();
     }
 
     public WebElement expectedFirstName() {

@@ -20,6 +20,10 @@ public class TestSingUp extends AbstractTestInit {
         registerPage.getEntrConfirmPass().sendKeys(registerPage.pass());
         registerPage.getRegisterBtn().click();
 
-        Assert.assertTrue(getUrl().contains("http://demowebshop.tricentis.com/registerresult/1"));
+        Assert.assertEquals(getUrl(), "http://demowebshop.tricentis.com/registerresult/1");
+
+        System.out.println("---------------------------------------------------------");
+        System.out.println("---------------------Test SingUp Ends---------------------");
+        System.out.println("---------------------------------------------------------");
     }
 }

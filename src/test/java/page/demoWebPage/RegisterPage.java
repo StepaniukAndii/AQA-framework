@@ -52,4 +52,5 @@ public class RegisterPage extends BasePage {
     public String pass() {
         return "ewqasdcxz";
     }
+
 }

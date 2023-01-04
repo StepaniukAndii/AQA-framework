@@ -5,10 +5,10 @@ import org.testng.annotations.Test;
 import page.demoWebPage.DemoWebCustomerInfoPage;
 import test.AbstractTestInit;
 
-public class TestCustomerAddres extends AbstractTestInit {
+public class TestCustomerAddress extends AbstractTestInit {
 
     @Test
-    public void checkCustomerAdress() {
+    public void checkCustomerAddress() {
         DemoWebCustomerInfoPage demoWebCustomerInfoPage = new DemoWebCustomerInfoPage(driver);
         demoWebCustomerInfoPage.logIn();
         demoWebCustomerInfoPage.goToCustomerInfo();
@@ -27,9 +27,16 @@ public class TestCustomerAddres extends AbstractTestInit {
         demoWebCustomerInfoPage.getEntrPhoneNumber().sendKeys("0936192813");
         demoWebCustomerInfoPage.clickBtnSave().click();
 
-        Assert.assertEquals(firstName + lastName, demoWebCustomerInfoPage.expectedFirstName().getText().replaceAll(" ", ""));
+        Assert.assertEquals(firstName + lastName, demoWebCustomerInfoPage.expectedFirstName()
+                .getText().replaceAll(" ", ""));
 
         demoWebCustomerInfoPage.deleteBtn().click();
         driver.switchTo().alert().accept();
+
+        System.out.println("---------------------------------------------------------");
+        System.out.println("---------------------Test Customer Address Ends---------------------");
+        System.out.println("---------------------------------------------------------");
+
+
     }
 }

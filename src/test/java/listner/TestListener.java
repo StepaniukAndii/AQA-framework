@@ -1,6 +1,5 @@
 package listner;
 
-import io.qameta.allure.Attachment;
 import lombok.SneakyThrows;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -11,7 +10,6 @@ import org.testng.ITestResult;
 import test.AbstractTestInit;
 
 import java.io.File;
-import java.io.IOException;
 
 public class TestListener implements ITestListener {
 
@@ -23,7 +21,8 @@ public class TestListener implements ITestListener {
         screen(driver);
     }
 
-    private void screen(WebDriver driver) throws IOException {
+    @SneakyThrows
+    private void screen(WebDriver driver) {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(scrFile, new File("target/screen//" + scrFile.getName()));
     }
@@ -36,7 +35,8 @@ public class TestListener implements ITestListener {
         screenAfterSkip(driver);
     }
 
-    private void screenAfterSkip(WebDriver driver) throws IOException {
+    @SneakyThrows
+    private void screenAfterSkip(WebDriver driver) {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(scrFile, new File("target/screen//" + scrFile.getName()));
     }

@@ -7,6 +7,7 @@ import page.rozetkaPage.RozetkaSortListPage;
 import test.AbstractTestInit;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class TestChangePriceLowToHide extends AbstractTestInit {
 
